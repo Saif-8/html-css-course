@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Flexbox Example</title>
+    <style>
+        /* General styles for body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        /* Outer flex container */
+        .outer-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: row;
+            width: 80%;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            padding: 20px;
+        }
+
+        /* Flex items in the outer container */
+        .flex-item {
+            width: 30%;
+            background-color: #e0e0e0;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Nested flexbox inside each flex-item */
+        .nested-container {
+            display: flex;
+            flex-direction: column; /* Flex items will stack vertically */
+            justify-content: space-around;
+            height: 200px;
+            margin-top: 10px;
+            background-color: #c0c0c0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Flex items in the nested container */
+        .nested-item {
+            background-color: #a0a0a0;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Outer flexbox container -->
+    <div class="outer-container">
+        <!-- First flex item -->
+        <div class="flex-item">
+            Flexbox 1
+            <div class="nested-container">
+                <!-- Nested flexbox items -->
+                <div class="nested-item">Nested Item 1</div>
+                <div class="nested-item">Nested Item 2</div>
+                <div class="nested-item">Nested Item 3</div>
+            </div>
+        </div>
+
+        <!-- Second flex item -->
+        <div class="flex-item">
+            Flexbox 2
+            <div class="nested-container">
+                <!-- Nested flexbox items -->
+                <div class="nested-item">Nested Item 1</div>
+                <div class="nested-item">Nested Item 2</div>
+                <div class="nested-item">Nested Item 3</div>
+            </div>
+        </div>
+
+        <!-- Third flex item -->
+        <div class="flex-item">
+            Flexbox 3
+            <div class="nested-container">
+                <!-- Nested flexbox items -->
+                <div class="nested-item">Nested Item 1</div>
+                <div class="nested-item">Nested Item 2</div>
+                <div class="nested-item">Nested Item 3</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

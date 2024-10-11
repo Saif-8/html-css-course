@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Example with Padding</title>
+    <style>
+        /* General styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header with fixed positioning */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            line-height: 60px; /* Vertically center the text */
+            z-index: 1000; /* Ensure header stays on top of other elements */
+        }
+
+        /* Sidebar with fixed positioning */
+        .sidebar {
+            position: fixed;
+            top: 60px; /* Below the fixed header */
+            left: 0;
+            width: 200px;
+            height: calc(100% - 60px); /* Full height minus header height */
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        /* Main content area with padding for header */
+        .content {
+            margin-left: 200px; /* Create space for the sidebar */
+            padding: 20px;
+            padding-top: 80px;  /* Add enough top padding so the content starts below the header */
+            background-color: #f4f4f4;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        /* Example content in the sidebar */
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 10px 0;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with fixed position -->
+    <div class="header">
+        My Fixed Header
+    </div>
+
+    <!-- Sidebar with fixed position -->
+    <div class="sidebar">
+        <h3>Sidebar Menu</h3>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main content area -->
+    <div class="content">
+        <h1>Main Content</h1>
+        <p>
+            This is the main content area. Notice that the content starts below the fixed header and to the right of the fixed sidebar.
+            You can scroll this section, and the header and sidebar will remain fixed in place.
+        </p>
+        <p>
+            CSS positioning allows you to control the layout of elements in your webpage. The header uses <code>position: fixed</code>,
+            so it remains at the top of the page even when you scroll. Similarly, the sidebar is also fixed, making it stay on the left
+            side of the page as you scroll the content.
+        </p>
+        <p>
+            When using <code>position: relative</code>, elements are positioned relative to their normal flow in the document. This is useful
+            when you need to adjust an element's position without removing it from the layout.
+        </p>
+        <p>
+            You can experiment with different positioning techniques, such as <code>position: absolute</code> to position elements relative to their
+            nearest positioned ancestor, or <code>position: fixed</code> to make elements stay in place as you scroll.
+        </p>
+        <p>
+            Try resizing the browser window to see how the layout behaves. The header and sidebar remain fixed, while the content area adjusts
+            to the available space.
+        </p>
+    </div>
+
+</body>
+</html>

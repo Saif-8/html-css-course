@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Text Boxes</title>
+    <style>
+        /* Style 1: Rounded Corners Text Box */
+        .rounded-textbox {
+            width: 300px;
+            padding: 10px;
+            border-radius: 15px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        /* Style 2: Shadow and No Border */
+        .shadow-textbox {
+            width: 300px;
+            padding: 10px;
+            border: none;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+        }
+
+        /* Style 3: LinkedIn Sign-Up Textbox */
+        .linkedin-textbox {
+            width: 300px;
+            padding: 12px;
+            border: 1px solid #0077B5;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .linkedin-textbox::placeholder {
+            color: #0077B5;
+        }
+
+        /* Style the Twitter text box */
+        .twitter-container {
+            position: relative;
+            width: 350px;
+            padding: 10px;
+        }
+
+        .twitter-textbox {
+            width: 100%;
+            padding-left: 60px; /* Space for the profile picture */
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Profile picture inside the text box */
+        .profile-picture {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h2>Styled Text Boxes</h2>
+
+    <!-- Style 1: Rounded Corners Text Box -->
+    <h3>Text Box with Rounded Corners</h3>
+    <input type="text" class="rounded-textbox" placeholder="Rounded Corners">
+
+    <!-- Style 2: Shadow and No Border Text Box -->
+    <h3>Text Box with Shadow and No Border</h3>
+    <input type="text" class="shadow-textbox" placeholder="Shadow and No Border">
+
+    <!-- Style 3: LinkedIn Style Sign-Up Text Box -->
+    <h3>LinkedIn Style Sign-Up Text Box</h3>
+    <input type="text" class="linkedin-textbox" placeholder="LinkedIn Sign-Up">
+
+    <h2>Twitter Text Box with Profile Picture</h2>
+
+    <div class="twitter-container">
+        <!-- Profile picture -->
+        <img src="luffy.jpg" alt="Luffy Profile Picture" class="profile-picture">
+        <!-- Twitter style text box -->
+        <input type="text" class="twitter-textbox" placeholder="What's happening?">
+    </div>
+</body>
+</html>

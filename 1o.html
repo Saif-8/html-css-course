@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Positioning</title>
+  <style>
+    /* Container to help demonstrate relative positioning */
+    .relative-container {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      background-color: lightblue;
+      border: 2px solid blue;
+      margin-bottom: 20px;
+    }
+
+    /* Box positioned relative to the container */
+    .relative-box {
+      position: relative;
+      top: 20px;
+      left: 20px;
+      width: 100px;
+      height: 100px;
+      background-color: lightgreen;
+    }
+
+    /* Box positioned absolutely within the relative container */
+    .absolute-box {
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      width: 100px;
+      height: 100px;
+      background-color: lightcoral;
+    }
+
+    /* Box positioned fixed on the screen (ignores container) */
+    .fixed-box {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      width: 150px;
+      height: 100px;
+      background-color: yellow;
+      border: 2px solid black;
+    }
+    
+    /* Absolute box inside fixed box */
+    .absolute-inside-fixed {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 100px;
+      height: 50px;
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Positioning Example</h1>
+
+  <!-- Container with relative positioning -->
+  <div class="relative-container">
+    <p>This is a relatively positioned container.</p>
+    <div class="relative-box">Relative Box</div>
+    <div class="absolute-box">Absolute Box</div>
+  </div>
+
+  <!-- Fixed box on the screen -->
+  <div class="fixed-box">
+    Fixed Box (Always on screen)
+    <div class="absolute-inside-fixed">Absolute in Fixed</div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox vs Grid Example</title>
+    <style>
+        /* Basic styling for the body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        /* Flexbox container styling */
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 1000px;
+            margin-bottom: 50px;
+        }
+
+        .flex-item {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin: 10px;
+            flex: 1 1 200px;
+            border-radius: 10px;
+        }
+
+        /* Grid container styling */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+            gap: 20px; /* Adds space between grid items */
+            background-color: #444;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 1000px;
+            margin-bottom: 50px;
+        }
+
+        .grid-item {
+            background-color: #FF5722;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 600px) {
+            .flex-container {
+                flex-direction: column;
+            }
+
+            .grid-container {
+                grid-template-columns: 1fr; /* Stack all items in a single column */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Flexbox Example</h1>
+    <div class="flex-container">
+        <div class="flex-item">
+            <h2>Flex Item 1</h2>
+            <p>This is some content inside a flexbox item.</p>
+        </div>
+
+        <div class="flex-item">
+            <h2>Flex Item 2</h2>
+            <p>This is another flexbox item.</p>
+        </div>
+
+        <div class="flex-item">
+            <h2>Flex Item 3</h2>
+            <p>Flexbox is powerful!</p>
+        </div>
+
+        <div class="flex-item">
+            <h2>Flex Item 4</h2>
+            <p>This will wrap on smaller screens.</p>
+        </div>
+    </div>
+
+    <h1>Grid Example</h1>
+    <div class="grid-container">
+        <div class="grid-item">
+            <h2>Grid Item 1</h2>
+            <p>Grid allows for easier 2D layouts.</p>
+        </div>
+
+        <div class="grid-item">
+            <h2>Grid Item 2</h2>
+            <p>You can define rows and columns.</p>
+        </div>
+
+        <div class="grid-item">
+            <h2>Grid Item 3</h2>
+            <p>Grid is ideal for complex layouts.</p>
+        </div>
+
+        <div class="grid-item">
+            <h2>Grid Item 4</h2>
+            <p>Each item stays in its cell.</p>
+        </div>
+
+        <div class="grid-item">
+            <h2>Grid Item 5</h2>
+            <p>Responsive behavior with Grid!</p>
+        </div>
+
+        <div class="grid-item">
+            <h2>Grid Item 6</h2>
+            <p>Grid is very flexible!</p>
+        </div>
+    </div>
+
+    <h2>Flexbox vs Grid: Key Differences</h2>
+    <p style="text-align: center; max-width: 800px;">
+        <strong>Flexbox</strong> is great for aligning elements in a single direction (either row or column). It excels at distributing space between items in 1D layouts. <br>
+        <strong>Grid</strong> allows for both rows and columns to be defined, making it better for 2D layouts like full-page layouts. You can control each element's position within both rows and columns.
+    </p>
+
+</body>
+</html>

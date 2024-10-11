@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber Sign-Up Form</title>
+    <style>
+        /* Basic styling for the form */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .signup-form {
+            width: 350px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .signup-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Input box styling */
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px; /* Margin between the inline boxes */
+        }
+
+        .form-group input {
+            width: 48%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Email and Signup Button block */
+        .email-box,
+        .signup-button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box; /* Ensure padding doesn't affect width */
+        }
+
+        .email-box {
+            border: 1px solid #ccc;
+        }
+
+        .signup-button {
+            background-color: #1c1c1e;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .signup-button:hover {
+            background-color: #111;
+        }
+    </style>
+</head>
+<body>
+
+    <form class="signup-form">
+        <h2>Sign Up for Uber</h2>
+
+        <!-- First Name and Last Name in line -->
+        <div class="form-group">
+            <input type="text" name="first-name" placeholder="First Name" required>
+            <input type="text" name="last-name" placeholder="Last Name" required>
+        </div>
+
+        <!-- Email in block display -->
+        <input type="email" class="email-box" name="email" placeholder="Email" required>
+
+        <!-- Sign-Up Button in block display -->
+        <button type="submit" class="signup-button">Sign Up</button>
+    </form>
+
+</body>
+</html>
